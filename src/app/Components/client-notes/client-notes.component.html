@@ -1,0 +1,14 @@
+<div class="top-content-wrapper">
+  <h4>Client Management</h4>
+  <div>
+      <div class="nav-left-side">
+        <mat-nav-list>
+          <a mat-list-item (click)="activeLink = link" class="nav-link {{activeLink == link ? 'active' : ''}}" routerLink="./{{link}}" *ngFor="let link of links"> {{ link }} </a>
+       </mat-nav-list>
+      </div>
+      <div class="content-right">
+        <router-outlet></router-outlet>
+      </div>
+  </div>
+</div>
+
