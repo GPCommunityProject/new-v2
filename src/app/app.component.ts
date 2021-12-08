@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'v2';
-  links = ['Dashboard', 'clients', 'Employees', 'Reports', 'Payroll', 'Tools'];
-  activeLink = 'clients';
+  links = ['Dashboard', 'Clients', 'Employees', 'Reports', 'Payroll', 'Tools'];
+  activeLink = '';
 }

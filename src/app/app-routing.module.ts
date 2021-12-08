@@ -7,7 +7,7 @@ import { TestComponent } from './Plugins/test/test.component';
 
 const routes: Routes = [
   {
-    path: 'clients',
+    path: 'Clients',
     component: ClientNotesComponent,
     children: [
       {
