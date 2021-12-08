@@ -63,7 +63,7 @@
             <!-- Actions Column -->
             <ng-container matColumnDef="Actions">
             <th mat-header-cell *matHeaderCellDef class="table-head" style="padding-right:0"> Actions </th>
-            <td mat-cell *matCellDef="let element" class="table-cell table-actions-cell" style="padding-right:0"> <fa-icon class="magin-right-10px"[icon]="faEdit"></fa-icon><fa-icon [icon]="faTrashAlt"></fa-icon></td>
+            <td mat-cell *matCellDef="let element" class="table-cell table-actions-cell" style="padding-right:0"> <fa-icon class="magin-right-10px color-primary-status"[icon]="faEdit"></fa-icon><fa-icon class="color-warning-status" [icon]="faTrashAlt"></fa-icon></td>
             </ng-container>
 
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

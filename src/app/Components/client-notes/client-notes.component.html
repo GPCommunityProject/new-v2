@@ -1,6 +1,6 @@
 <div class="top-content-wrapper">
   <h4 style="padding-bottom:10px">Client Management</h4>
-  <div>
+  <div style="min-height: 1100px;background-color: #fff;border: 1px solid #CCC;">
       <div class="nav-left-side">
         <mat-nav-list>
           <a mat-list-item (click)="activeLink = link" class="nav-link {{activeLink == link ? 'active' : ''}}" routerLink="./{{link}}" *ngFor="let link of links"> {{ link }} </a>

@@ -90,3 +90,11 @@ th.mat-header-cell:first-of-type, td.mat-cell:first-of-type, td.mat-footer-cell:
     -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
+
+.color-warning-status {
+    color: #cf493e;
+}
+
+.color-primary-status {
+    color: #3277b0;
+}
