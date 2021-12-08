@@ -8,15 +8,15 @@
                     [pageSizeOptions]="[5, 10, 25, 100]">
         </mat-paginator>
     </div>
-    <div>
+    <div class="search-bar bg-color-grey">
         <label>Note Category</label>
-        <mat-form-field appearance="fill" class="margin-left margin-right">
-            <mat-select>
-            <mat-option *ngFor="let filter of filters" [value]="filter.value">
-                {{filter.viewValue}}
-            </mat-option>
-            </mat-select>
-        </mat-form-field>
+        <div class="margin-right margin-left" style="width: 33%;">
+            <select id="filter-selection">
+                <option *ngFor="let filter of filters" [value]="filter.value">
+                    {{filter.viewValue}}
+                </option>
+            </select>
+        </div>
         <button class="btn" color="primary">Filter</button>
     </div>
     <div style="overflow: auto;">
