@@ -43,7 +43,7 @@
     </div>
   </div>
 </div>
-<nav mat-tab-nav-bar>
+<nav mat-tab-nav-bar style="background-color: #f7f7f7;">
   <a mat-tab-link href={{link}} *ngFor="let link of links"
      (click)="activeLink = link"
      [active]="activeLink == link"> {{link}} </a>
