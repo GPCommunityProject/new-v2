@@ -17,6 +17,8 @@ import { MatTableModule } from '@angular/material/table';
 import { TestComponent } from './Plugins/test/test.component';
 import { FooterComponent } from './Plugins/footer/footer.component';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +37,8 @@ import { FooterComponent } from './Plugins/footer/footer.component';
     MatButtonModule,
     MatPaginatorModule,
     MatSelectModule,
-    MatTableModule
+    MatTableModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

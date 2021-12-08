@@ -1,24 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
 export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
+  'Note Category': string;
+  'Note Type': string;
+  'Note Priority': string;
+  'Notes': string;
+  'Effective Date': string;
+  'Expiration Date': string;
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
-  {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
-  {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
-  {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
-  {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
-  {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
-  {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
-];
 
 @Component({
   selector: 'app-notes',
@@ -26,10 +17,64 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./notes.component.scss']
 })
 export class NotesComponent implements OnInit {
+  faEdit = faEdit;
+  faTrashAlt = faTrashAlt;
+
+  ELEMENT_DATA: PeriodicElement[] = [
+    {
+      'Note Category': 'General Service Bureau',
+      'Note Type': 'Previous Processor',
+      'Note Priority': 'Low',
+      'Notes': 'BI-WEEKLY: Patricia.Suvak',
+      'Effective Date': '09/07/2012',
+      'Expiration Date': '09/07/2013'
+    },
+    {
+      'Note Category': 'General Super User',
+      'Note Type': 'Nect Processor',
+      'Note Priority': 'Hight',
+      'Notes': 'BI-WEEKLY: Patricia.Suvak',
+      'Effective Date': '10/07/2012',
+      'Expiration Date': '12/07/2013'
+    },
+    {
+      'Note Category': 'General Service Bureau',
+      'Note Type': 'Previous Processor',
+      'Note Priority': 'Low',
+      'Notes': 'BI-WEEKLY: Patricia.Suvak',
+      'Effective Date': '09/07/2012',
+      'Expiration Date': '09/07/2013'
+    },
+    {
+      'Note Category': 'General Super User',
+      'Note Type': 'Nect Processor',
+      'Note Priority': 'Hight',
+      'Notes': 'BI-WEEKLY: Patricia.Suvak',
+      'Effective Date': '10/07/2012',
+      'Expiration Date': '12/07/2013'
+    },
+    {
+      'Note Category': 'General Service Bureau',
+      'Note Type': 'Previous Processor',
+      'Note Priority': 'Low',
+      'Notes': 'BI-WEEKLY: Patricia.Suvak',
+      'Effective Date': '09/07/2012',
+      'Expiration Date': '09/07/2013'
+    },
+    {
+      'Note Category': 'General Super User',
+      'Note Type': 'Nect Processor',
+      'Note Priority': 'Hight',
+      'Notes': 'BI-WEEKLY: Patricia.Suvak',
+      'Effective Date': '10/07/2012',
+      'Expiration Date': '12/07/2013'
+    },
+  ];
+
   filters = [{'value': 'all', 'viewValue': 'all'}, {'value': 'test1', 'viewValue': 'test1'}];
 
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA;
+  displayedColumns: string[] = ['Note Category', 'Note Type', 'Note Priority', 'Notes', 'Effective Date', 'Expiration Date', 'Actions'];
+  dataSource = this.ELEMENT_DATA;
   
   constructor() { }
 
