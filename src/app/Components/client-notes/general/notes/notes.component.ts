@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { AddClientNotesFormComponent } from 'app/Plugins/add-client-notes-form/add-client-notes-form.component';
 
 export interface PeriodicElement {
   'Note Category': string;
@@ -76,9 +78,18 @@ export class NotesComponent implements OnInit {
   displayedColumns: string[] = ['Note Category', 'Note Type', 'Note Priority', 'Notes', 'Effective Date', 'Expiration Date', 'Actions'];
   dataSource = this.ELEMENT_DATA;
   
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
 
+  openDialog(): void {
+    const dialogRef = this.dialog.open(AddClientNotesFormComponent, {
+      width: '600px'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
 }
