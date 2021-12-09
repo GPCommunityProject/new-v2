@@ -1,4 +1,4 @@
-<h1 mat-dialog-title class="dialog-title">Add Client Node</h1>
+<h3 mat-dialog-title class="dialog-title">Add Client Node</h3>
 <div class="row">
     <label class="label">Note Type</label><select class="form-field"></select>
 </div>
@@ -6,15 +6,15 @@
     <label class="label">Note Priority</label><select class="form-field"></select>
 </div>
 <div class="row">
-    <label class="label">Effective Date </label><input class="form-field"/>
+    <label class="label">Effective Date </label><input class="form-field date-picker"/>
 </div>
 <div class="row">
-    <label class="label">Expiration Date </label><input class="form-field"/>
+    <label class="label">Expiration Date </label><input class="form-field date-picker"/>
 </div>
 <div class="row">
-    <label class="label">Notes </label><textarea></textarea>
+    <label class="label note">Notes </label><textarea  class="textarea"></textarea>
 </div>
-<div mat-dialog-actions>
-  <button mat-button>No Thanks</button>
-  <button mat-button cdkFocusInitial>Ok</button>
+<div mat-dialog-actions class="dialog-footer">
+  <button mat-button class="btn primary-btn">Save</button>
+  <button mat-button class="btn default-btn">Cancel</button>
 </div>

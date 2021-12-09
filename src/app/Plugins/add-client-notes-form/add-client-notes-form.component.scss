@@ -1,0 +1,53 @@
+h3.dialog-title {
+    font-size: 24px;
+    color: #737373;
+    background-color: #f7f7f7;
+    padding: 10px;
+}
+
+.row {
+    color: #737373;
+    margin: 10px 0;
+
+    .label {
+        display: inline-block;
+        width: 200px;
+        vertical-align: center;
+    }
+
+    .label.note {
+        vertical-align: top;
+    }
+
+    .form-field {
+        width: 270px;
+        height: 35px;
+    }
+
+    .textarea {
+        width: 62%;
+        height: 100px;
+    }
+}
+
+.dialog-footer {
+    border-top: 1px solid #e5e5e5;
+
+    .btn {
+        font-size: 12px;
+        border: 1px solid;
+        width: 80px;
+        border-radius: 0;
+    }
+
+    .primary-btn {
+        color: #fff;
+        background-color: #337ab7;
+        border-color: #2e6da4;
+    }
+    .default-btn {
+        color: #333;
+        background-color: #fff;
+        border-color: #ccc;
+    }
+}

@@ -85,7 +85,8 @@ export class NotesComponent implements OnInit {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(AddClientNotesFormComponent, {
-      width: '600px'
+      width: '600px',
+      backdropClass: 'dialog-container'
     });
 
     dialogRef.afterClosed().subscribe(result => {
