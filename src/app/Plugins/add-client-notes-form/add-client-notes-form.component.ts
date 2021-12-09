@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-add-client-notes-form',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddClientNotesFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public dialogRef: MatDialogRef<AddClientNotesFormComponent>,
+  ) {
+
+  }
 
   ngOnInit(): void {
   }
 
+  onCloseClick(): void {
+    this.dialogRef.close();
+  }
 }
