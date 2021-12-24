@@ -37,3 +37,11 @@ $v2-theme: mat.define-light-theme((
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.cdk-overlay-container {
+  .cdk-overlay-backdrop {
+    background: rgba(0, 0, 0, .5);
+    color: #737373
+  }
+}
