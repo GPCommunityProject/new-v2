@@ -1,0 +1,23 @@
+#clientGeneralTabs {
+    a {
+        display: inline-block;
+        border: 1px solid transparent;
+        border-radius: 0;
+        color: #777;
+        font-size: 14px;
+        line-height: 1.42857;
+        /* margin-right: 2px; */
+        margin-right: 0px;
+        outline: none;
+        border-bottom: 1px solid #e7e7e7;
+        border-left: 1px solid #e7e7e7;
+        background-color: #f7f7f7;
+        padding: 10px 12px;
+        text-decoration: none;
+    }
+
+    a.active, a:hover {
+        background-color: #ddd;
+        border-color: #ddd #ddd transparent;
+    }
+}
