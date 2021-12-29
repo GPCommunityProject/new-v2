@@ -20,6 +20,7 @@ import { FooterComponent } from './Plugins/footer/footer.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AddClientNotesFormComponent } from './Plugins/add-client-notes-form/add-client-notes-form.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { AddClientNotesFormComponent } from './Plugins/add-client-notes-form/add
     NotesComponent,
     TestComponent,
     FooterComponent,
-    AddClientNotesFormComponent
+    AddClientNotesFormComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

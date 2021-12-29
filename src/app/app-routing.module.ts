@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, UrlSegment } from '@angular/router';
 import { ClientNotesComponent } from './Components/client-notes/client-notes.component';
 import { GeneralComponent } from './Components/client-notes/general/general.component';
 import { NotesComponent } from './Components/client-notes/general/notes/notes.component';
 import { TestComponent } from './Plugins/test/test.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   {
@@ -31,7 +32,23 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot([
+    {
+        matcher: (url) => {
+        if (url.length === 3 && url[0].path.match(/^@[\w]+$/gm)) {
+          return {
+            consumed: url,
+            posParams: {
+              username: new UrlSegment(url[0].path.substr(1), {})
+            }
+          };
+        }
+    
+        return null;
+      },
+      component: ProfileComponent
+    }
+  ])],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
