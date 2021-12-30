@@ -46,15 +46,66 @@ fa-icon:hover {
 #cliet-notes-table {
     border-spacing: 0;
     border-collapse: collapse;
+    border-top: 2px solid #3277b0;
+
+        tr:nth-child(even) {
+            background-color: #eaeaea;
+        }
+
+        tr:hover {
+            background-color: #ECF3F9;
+        }
 }
 
 .table-head {
+    position: relative;
     background-color: #cfcfcf;
     cursor: pointer;
     border: 1px solid #ddd;
     border-top: 0;
     border-bottom: 0;
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    padding-right: 15px;
+    color: #525252;
+
+    .sort-indicator:before {
+        margin-top: 2px;
+        border-bottom: 0;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 4px solid #000;
+        content: "";
+        visibility: visible;
+        right: 5px;
+        top: 50%;
+        position: absolute;
+        opacity: .3;
+    }
+
+    .sort-indicator:after {
+        content: "";
+        border-width: 0 4px 4px;
+        border-style: solid;
+        border-color: #000 transparent;
+        visibility: visible;
+        right: 5px;
+        top: 50%;
+        position: absolute;
+        opacity: .3;
+        margin-top: -4px;
+    }
+
+    .sort-asc.sort-indicator:after, .sort-desc.sort-indicator:after {
+        display: none;
+    }
+}
+
+.table-head:hover {
+    .sort-indicator:before,.sort-indicator:after {
+        opacity: 1;
+    }
 }
 
 th.mat-header-cell:first-of-type, td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type{
