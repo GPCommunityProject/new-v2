@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { faPencilAlt, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { AddClientNotesFormComponent } from 'app/Plugins/add-client-notes-form/add-client-notes-form.component';
 
@@ -19,7 +19,7 @@ export interface PeriodicElement {
   styleUrls: ['./notes.component.scss']
 })
 export class NotesComponent implements OnInit {
-  faEdit = faEdit;
+  faPencilAlt = faPencilAlt;
   faTrashAlt = faTrashAlt;
 
   ELEMENT_DATA: PeriodicElement[] = [

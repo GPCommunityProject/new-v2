@@ -27,43 +27,43 @@
         
             <!-- Note Category Column -->
             <ng-container matColumnDef="Note Category">
-            <th mat-header-cell *matHeaderCellDef class="table-head"> Note Category</th>
+            <th mat-header-cell *matHeaderCellDef class="table-head"><div class="sort-indicator">Note Category</div></th>
             <td mat-cell *matCellDef="let element" class="table-cell"> {{element['Note Category']}} </td>
             </ng-container>
         
             <!-- Note Type Column -->
             <ng-container matColumnDef="Note Type">
-            <th mat-header-cell *matHeaderCellDef class="table-head"> Note Type </th>
+            <th mat-header-cell *matHeaderCellDef class="table-head"><div class="sort-indicator">Note Type</div></th>
             <td mat-cell *matCellDef="let element" class="table-cell"> {{element['Note Type']}} </td>
             </ng-container>
         
             <!-- Note Priority Column -->
             <ng-container matColumnDef="Note Priority">
-            <th mat-header-cell *matHeaderCellDef class="table-head"> Note Priority </th>
+            <th mat-header-cell *matHeaderCellDef class="table-head"><div class="sort-indicator">Note Priority</div></th>
             <td mat-cell *matCellDef="let element" class="table-cell"> {{element['Note Priority']}} </td>
             </ng-container>
         
             <!-- Notes Column -->
             <ng-container matColumnDef="Notes">
-            <th mat-header-cell *matHeaderCellDef class="table-head"> Notes </th>
+            <th mat-header-cell *matHeaderCellDef class="table-head"><div class="sort-indicator">Notes</div></th>
             <td mat-cell *matCellDef="let element" class="table-cell"> {{element['Notes']}} </td>
             </ng-container>
 
             <!-- Effective Date Column -->
             <ng-container matColumnDef="Effective Date">
-            <th mat-header-cell *matHeaderCellDef class="table-head"> Effective Date </th>
+            <th mat-header-cell *matHeaderCellDef class="table-head"><div class="sort-indicator">Effective Date</div></th>
             <td mat-cell *matCellDef="let element" class="table-cell"> {{element['Effective Date']}} </td>
             </ng-container>
 
             <!-- Expiration Date Column -->
             <ng-container matColumnDef="Expiration Date">
-            <th mat-header-cell *matHeaderCellDef class="table-head"> Expiration Date </th>
+            <th mat-header-cell *matHeaderCellDef class="table-head"><div class="sort-indicator">Expiration Date</div></th>
             <td mat-cell *matCellDef="let element" class="table-cell"> {{element['Expiration Date']}} </td>
             </ng-container>
             <!-- Actions Column -->
             <ng-container matColumnDef="Actions">
             <th mat-header-cell *matHeaderCellDef class="table-head" style="padding-right:0"> Actions </th>
-            <td mat-cell *matCellDef="let element" class="table-cell table-actions-cell" style="padding-right:0"> <fa-icon class="magin-right-10px color-primary-status"[icon]="faEdit"></fa-icon><fa-icon class="color-warning-status" [icon]="faTrashAlt"></fa-icon></td>
+            <td mat-cell *matCellDef="let element" class="table-cell table-actions-cell" style="padding-right:0"> <fa-icon class="magin-right-10px color-primary-status"[icon]="faPencilAlt"></fa-icon><fa-icon class="heartland-red" [icon]="faTrashAlt"></fa-icon></td>
             </ng-container>
 
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
