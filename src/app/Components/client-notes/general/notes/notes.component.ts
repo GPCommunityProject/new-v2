@@ -22,6 +22,10 @@ export class NotesComponent implements OnInit {
   faPencilAlt = faPencilAlt;
   faTrashAlt = faTrashAlt;
 
+  currentIndex = 1;
+  currentTotal = 4;
+  total = 4;
+
   ELEMENT_DATA: PeriodicElement[] = [
     {
       'Note Category': 'General Service Bureau',

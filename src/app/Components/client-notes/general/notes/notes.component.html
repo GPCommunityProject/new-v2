@@ -1,12 +1,17 @@
 <div>
     <h4 style="font-size:18px;margin: 20px 0 5px 0">Client Notes</h4>
     <hr />
-    <div class="flex-space-between">
+    <div class="flex-space-between" style="margin-bottom:23px">
         <button class="btn" color="primary" (click)="openDialog()">Add Client Notes</button>
-        <mat-paginator [length]="100"
-                    [pageSize]="10"
-                    [pageSizeOptions]="[5, 10, 25, 100]">
-        </mat-paginator>
+        <div style="padding-right:30px;color:rgb(48, 48, 48)">
+            <span class="text">Viewing </span>
+                {{currentIndex}}
+            <span class="text"> - </span>
+                {{currentTotal}}
+            <span class="text"> of </span>
+                {{total}}
+            <span class="text"> records</span>
+        </div>
     </div>
     <div class="search-bar bg-color-grey">
         <label>Note Category</label>
